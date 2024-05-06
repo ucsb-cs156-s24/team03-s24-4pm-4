@@ -11,7 +11,7 @@ export default function UCSBDiningCommonsMenuItemCreatePage({storybook=false}) {
         method: "POST",
         params: {
          diningCommonsCode: UCSBDiningCommonsMenuItem.diningCommonsCode,
-         name: UCSBDiningCommonsMenuItem.MenuItemname,
+         name: UCSBDiningCommonsMenuItem.name,
          station: UCSBDiningCommonsMenuItem.station
         }
       });
