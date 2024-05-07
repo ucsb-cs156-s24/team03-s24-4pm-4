@@ -98,4 +98,4 @@ export function ButtonColumn(label, variant, callback, testid) {
     )
   }
   return column;
-} 
+}
