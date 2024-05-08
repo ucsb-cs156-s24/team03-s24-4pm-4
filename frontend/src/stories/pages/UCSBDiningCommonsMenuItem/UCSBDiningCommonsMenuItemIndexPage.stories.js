@@ -40,7 +40,7 @@ ThreeItemsOrdinaryUser.parameters = {
             return res(ctx.json(systemInfoFixtures.showingNeither));
         }),
         rest.get('/api/ucsbdiningcommonsmenuitem/all', (_req, res, ctx) => {
-            return res(ctx.json(ucsbDatesFixtures.threeDates));
+            return res(ctx.json(ucsbDiningCommonsMenuItemFixtures.threeItems));
         }),
     ],
 }
