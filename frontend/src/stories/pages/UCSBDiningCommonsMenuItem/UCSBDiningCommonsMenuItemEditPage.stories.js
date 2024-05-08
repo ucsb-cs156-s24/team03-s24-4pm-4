@@ -24,7 +24,7 @@ Default.parameters = {
             return res(ctx.json(systemInfoFixtures.showingNeither));
         }),
         rest.get('/api/ucsbdiningcommonsmenuitem', (_req, res, ctx) => {
-            return res(ctx.json(ucsbDatesFixtures.threeDates[0]));
+            return res(ctx.json(ucsbDiningCommonsMenuItemFixtures.threeDates[0]));
         }),
         rest.put('/api/ucsbdiningcommonsmenuitem', async (req, res, ctx) => {
             var reqBody = await req.text();
