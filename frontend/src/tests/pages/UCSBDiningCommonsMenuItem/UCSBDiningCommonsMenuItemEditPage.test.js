@@ -146,7 +146,7 @@ describe("UCSBDiningCommonsMenuItemEditPage tests", () => {
             expect(diningCommonsCodeField).toHaveValue("PORT");
             expect(nameField).toHaveValue("Sushi");
             expect(stationField).toHaveValue("Asian");
-            
+            expect(submitButton).toHaveTextContent("Update");
             expect(submitButton).toBeInTheDocument();
             fireEvent.change(diningCommonsCodeField, { target: { value: 'PORT' } })
             fireEvent.change(nameField, { target: { value: 'Sushi' } })
