@@ -99,7 +99,7 @@ function MenuItemReviewForm({ initialContents, submitAction, buttonLabel = "Crea
                             })}
                         />
                         <Form.Control.Feedback type="invalid">
-                            {errors.stars?.message}
+                            {errors.stars?.message} 
                             {errors.stars?.type === 'pattern' && 'Stars must be a number from 1 to 5.'}
                         </Form.Control.Feedback>
                     </Form.Group>
