@@ -146,7 +146,7 @@ describe("ArticlesIndexPage tests", () => {
         expect(deleteButton).toBeInTheDocument();
 
         // expect(screen.queryByTestId("ArticlesTable-cell-row-0-col-Delete-button")).not.toBeInTheDocument();
-        expect(screen.queryByTestId("ArticlesTable-cell-row-0-col-Edit-button")).toBeInTheDocument();
+        expect(screen.getByTestId("ArticlesTable-cell-row-0-col-Edit-button")).toBeInTheDocument();
 
         fireEvent.click(deleteButton);
 
