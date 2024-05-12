@@ -14,7 +14,7 @@ export default function HelpRequestTable({ requests, currentUser }) {
     // Edit, delete not implemented yet!!
     
     const editCallback = (cell) => {
-        navigate(`/HelpRequest/edit/${cell.row.values.id}`)
+        navigate(`/helprequest/edit/${cell.row.values.id}`)
     }
 
     // Stryker disable all : hard to test for query caching
