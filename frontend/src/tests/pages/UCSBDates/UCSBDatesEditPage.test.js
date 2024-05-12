@@ -146,8 +146,8 @@ describe("UCSBDatesEditPage tests", () => {
             expect(quarterYYYYQField).toHaveValue("20221");
             expect(nameField).toHaveValue("Pi Day");
             expect(localDateTimeField).toHaveValue("2022-03-14T15:00");
-
             expect(submitButton).toBeInTheDocument();
+
 
             fireEvent.change(quarterYYYYQField, { target: { value: '20224' } })
             fireEvent.change(nameField, { target: { value: 'Christmas Morning' } })
