@@ -51,4 +51,9 @@ build/
 ### Local Configuration ###
 .env
 .DS_Store
-.log
+
+.stryker-tmp/
+
+# Ignore specific Stryker log and config files
+stryker.log
+stryker.conf.json
