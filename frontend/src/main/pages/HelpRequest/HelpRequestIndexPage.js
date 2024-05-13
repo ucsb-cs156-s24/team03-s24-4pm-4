@@ -32,6 +32,10 @@ export default function HelpRequestIndexPage() {
       []
     );
 
+  // hack: otherwise solved as a boolean is not going to show in table
+  for (const req of requests) {
+    req.solved = (req.solved === true || req.solved === "true")? "true" : "false";
+  }
   return (
     <BasicLayout>
       <div className="pt-2">
