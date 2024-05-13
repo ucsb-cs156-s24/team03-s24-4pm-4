@@ -87,6 +87,12 @@ describe("RecommendationRequestTable tests", () => {
     expect(screen.getByTestId(`${testId}-cell-row-1-col-done`)).toHaveTextContent("true");
 
     expect(screen.getByTestId(`${testId}-cell-row-2-col-id`)).toHaveTextContent("4");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-requesterEmail`)).toHaveTextContent("test4@gmail.com");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-professorEmail`)).toHaveTextContent("test4@gmail.com");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-explanation`)).toHaveTextContent("na4");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-dateRequested`)).toHaveTextContent("2022-01-02T12:00:00");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-dateNeeded`)).toHaveTextContent("2022-01-02T12:00:00");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-done`)).toHaveTextContent("true");
 
     const editButton = screen.getByTestId(`${testId}-cell-row-0-col-Edit-button`);
     expect(editButton).toBeInTheDocument();
@@ -139,6 +145,12 @@ describe("RecommendationRequestTable tests", () => {
     expect(screen.getByTestId(`${testId}-cell-row-1-col-done`)).toHaveTextContent("true");
 
     expect(screen.getByTestId(`${testId}-cell-row-2-col-id`)).toHaveTextContent("4");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-requesterEmail`)).toHaveTextContent("test4@gmail.com");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-professorEmail`)).toHaveTextContent("test4@gmail.com");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-explanation`)).toHaveTextContent("na4");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-dateRequested`)).toHaveTextContent("2022-01-02T12:00:00");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-dateNeeded`)).toHaveTextContent("2022-01-02T12:00:00");
+    expect(screen.getByTestId(`${testId}-cell-row-2-col-done`)).toHaveTextContent("true");
 
     expect(screen.queryByText("Delete")).not.toBeInTheDocument();
     expect(screen.queryByText("Edit")).not.toBeInTheDocument();
