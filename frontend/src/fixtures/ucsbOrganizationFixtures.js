@@ -1,28 +1,28 @@
 const ucsbOrganizationFixtures = {
-    oneOrg:
+    oneOrganization:
      [ 
         {
-        "orgCode": "DSP",
+        "orgCode": "1",
         "orgTranslationShort": "Delta Sig",
         "orgTranslation": "Delta Sigma Pi",
         "inactive": false
     } 
 ],
-    threeOrgs: [
+    threeOrganizations: [
         {
-            "orgCode": "DSP",
+            "orgCode": "2",
             "orgTranslationShort": "Delta Sig",
             "orgTranslation": "Delta Sigma Pi",
             "inactive": false
         },
         {
-            "orgCode": "TSSA",
+            "orgCode": "3",
             "orgTranslationShort": "Turkish Student",
             "orgTranslation": "Turkish Student Association",
             "inactive": true
         },
         {
-            "orgCode": "GC",
+            "orgCode": "4",
             "orgTranslationShort": "Gaucho",
             "orgTranslation": "Gaucho Creative",
             "inactive": false

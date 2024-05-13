@@ -74,7 +74,9 @@
   "jest": {
     "resetMocks": true,
     "collectCoverageFrom": [
-      "src/main/**/*.{js,jsx,ts,tsx}"
+      "src/main/**/*.{js,jsx,ts,tsx}",
+      "!**/*.stories.js"
+
     ],
     "coverageThreshold": {
       "global": {
