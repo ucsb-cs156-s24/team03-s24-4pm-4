@@ -18,19 +18,19 @@ const Template = (args) => {
 export const Empty = Template.bind({});
 
 Empty.args = {
-    requests: []
+    recommendationrequests: []
 };
 
 export const ThreeItemsOrdinaryUser = Template.bind({});
 
 ThreeItemsOrdinaryUser.args = {
-    requests: recommendationRequestFixtures.threeRecommendationRequests,
+    recommendationrequests: recommendationRequestFixtures.threeRecommendationRequests,
     currentUser: currentUserFixtures.userOnly,
 };
 
 export const ThreeItemsAdminUser = Template.bind({});
 ThreeItemsAdminUser.args = {
-    requests: recommendationRequestFixtures.threeRecommendationRequests,
+    recommendationrequests: recommendationRequestFixtures.threeRecommendationRequests,
     currentUser: currentUserFixtures.adminUser,
 }
 
