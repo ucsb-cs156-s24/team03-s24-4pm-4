@@ -192,8 +192,6 @@ describe("ArticlesEditPage tests", () => {
             
 
         });
-
-       
     });
 });
 
