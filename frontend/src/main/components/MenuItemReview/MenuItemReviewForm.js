@@ -108,16 +108,16 @@ function MenuItemReviewForm({ initialContents, submitAction, buttonLabel = "Crea
             <Row>
                 <Col>
                     <Form.Group className="mb-3">
-                        <Form.Label htmlFor="localDateTime">Date (iso format)</Form.Label>
+                        <Form.Label htmlFor="dateReviewed">Date (iso format)</Form.Label>
                         <Form.Control
-                            data-testid="MenuItemReviewForm-localDateTime"
-                            id="localDateTime"
+                            data-testid="MenuItemReviewForm-dateReviewed"
+                            id="dateReviewed"
                             type="datetime-local"
-                            isInvalid={Boolean(errors.localDateTime)}
-                            {...register("localDateTime", { required: true, pattern: isodate_regex })}
+                            isInvalid={Boolean(errors.dateReviewed)}
+                            {...register("dateReviewed", { required: true, pattern: isodate_regex })}
                         />
                         <Form.Control.Feedback type="invalid">
-                            {errors.localDateTime && 'LocalDateTime is required.'}
+                            {errors.dateReviewed && 'Date Reviewed is required.'}
                         </Form.Control.Feedback>
                     </Form.Group>
                 </Col>

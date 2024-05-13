@@ -47,12 +47,12 @@ describe("MenuItemReviewForm tests", () => {
         );
         await screen.findByTestId("MenuItemReviewForm-itemId");
         const itemIdField = screen.getByTestId("MenuItemReviewForm-itemId");
-        const localDateTimeField = screen.getByTestId("MenuItemReviewForm-localDateTime");
+        const dateReviewedField = screen.getByTestId("MenuItemReviewForm-dateReviewed");
         const starsField = screen.getByTestId("MenuItemReviewForm-stars");
         const submitButton = screen.getByTestId("MenuItemReviewForm-submit");
 
         fireEvent.change(itemIdField, { target: { value: 'bad-input' } });
-        fireEvent.change(localDateTimeField, { target: { value: 'bad-input' } });
+        fireEvent.change(dateReviewedField, { target: { value: 'bad-input' } });
         fireEvent.change(starsField, { target: { value: 'bad-input' } });
         fireEvent.click(submitButton);
 
@@ -81,7 +81,7 @@ describe("MenuItemReviewForm tests", () => {
 
         await screen.findByText(/Item Id is required./);
         expect(screen.getByText(/Reviewer Email is required./)).toBeInTheDocument();
-        expect(screen.getByText(/LocalDateTime is required./)).toBeInTheDocument();
+        expect(screen.getByText(/Date Reviewed is required./)).toBeInTheDocument();
         expect(screen.getByText(/Stars is required./)).toBeInTheDocument();
         expect(screen.getByText(/Comments is required./)).toBeInTheDocument();
 
@@ -102,14 +102,14 @@ describe("MenuItemReviewForm tests", () => {
         const itemIdField = screen.getByTestId("MenuItemReviewForm-itemId");
         const reviewerEmailField = screen.getByTestId("MenuItemReviewForm-reviewerEmail");
         const starsField = screen.getByTestId("MenuItemReviewForm-stars");
-        const localDateTimeField = screen.getByTestId("MenuItemReviewForm-localDateTime");
+        const dateReviewedField = screen.getByTestId("MenuItemReviewForm-dateReviewed");
         const commentsField = screen.getByTestId("MenuItemReviewForm-comments");
         const submitButton = screen.getByTestId("MenuItemReviewForm-submit");
 
         fireEvent.change(itemIdField, { target: { value: '1' } });
         fireEvent.change(reviewerEmailField, { target: { value: 'test@gmail.com' } });
         fireEvent.change(starsField, { target: { value: '3' } });
-        fireEvent.change(localDateTimeField, { target: { value: '2022-01-02T12:00' } });
+        fireEvent.change(dateReviewedField, { target: { value: '2022-01-02T12:00' } });
         fireEvent.change(commentsField, { target: { value: 'This is a test review' } });
         fireEvent.click(submitButton);
 
@@ -119,7 +119,7 @@ describe("MenuItemReviewForm tests", () => {
         expect(screen.queryByText(/Reviewer Email is required./)).not.toBeInTheDocument();
         expect(screen.queryByText(/Stars is required./)).not.toBeInTheDocument();
         expect(screen.queryByText(/Stars must be a number from 1 to 5./)).not.toBeInTheDocument();
-        expect(screen.queryByText(/LocalDateTime is required./)).not.toBeInTheDocument();
+        expect(screen.queryByText(/Date Reviewed is required./)).not.toBeInTheDocument();
         expect(screen.queryByText(/Comments is required./)).not.toBeInTheDocument();
 
 

@@ -6,7 +6,7 @@ const recommendationRequestFixtures = {
         "explanation": "na",
         "dateRequested": "2022-01-02T12:00:00",
         "dateNeeded": "2022-01-02T12:00:00",
-        "done": true       
+        "done": "true"       
     },
     threeRecommendationRequests:
     [
@@ -17,7 +17,7 @@ const recommendationRequestFixtures = {
             "explanation": "na2",
             "dateRequested": "2022-01-02T12:00:00",
             "dateNeeded": "2022-01-02T12:00:00",
-            "done": false         
+            "done": "false"         
         },
         {
             "id": 3,
@@ -26,7 +26,7 @@ const recommendationRequestFixtures = {
             "explanation": "na3",
             "dateRequested": "2022-01-02T12:00:00",
             "dateNeeded": "2022-01-02T12:00:00",
-            "done": true      
+            "done": "true"      
         },
         {
             "id": 4,
@@ -35,7 +35,7 @@ const recommendationRequestFixtures = {
             "explanation": "na4",
             "dateRequested": "2022-01-02T12:00:00",
             "dateNeeded": "2022-01-02T12:00:00",
-            "done": true    
+            "done": "true"    
         },
     ]
 };
