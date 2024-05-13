@@ -76,6 +76,7 @@
     "collectCoverageFrom": [
       "src/main/**/*.{js,jsx,ts,tsx}",
       "!**/*.stories.js"
+      
 
     ],
     "coverageThreshold": {

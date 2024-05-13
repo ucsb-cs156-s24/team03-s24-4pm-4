@@ -10,10 +10,14 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 const mockedNavigate = jest.fn();
 
+// Stryker disable all
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useNavigate: () => mockedNavigate
+    useNavigate: () => mockedNavigate,
 }));
+// Stryker enable all
+
+
 
 describe("UCSBOrganizationForm tests", () => {
     const queryClient = new QueryClient();
