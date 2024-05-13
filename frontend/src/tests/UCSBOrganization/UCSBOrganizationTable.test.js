@@ -90,7 +90,7 @@ describe("UCSBOrganizationTable tests", () => {
     );
   
     // Assertions to check non-admin user does not see Edit and Delete buttons
-    ucsbOrganizationFixtures.threeOrganizations.forEach((org, index) => {
+    ucsbOrganizationFixtures.threeOrganizations.forEach((_, index) => {
       expect(screen.queryByTestId(`${testId}-cell-row-${index}-col-Edit-button`)).toBeNull();
       expect(screen.queryByTestId(`${testId}-cell-row-${index}-col-Delete-button`)).toBeNull();
     });
