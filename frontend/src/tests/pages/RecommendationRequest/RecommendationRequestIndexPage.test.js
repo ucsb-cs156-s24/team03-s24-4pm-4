@@ -22,14 +22,11 @@ jest.mock('react-toastify', () => {
     };
 });
 
-
 describe("RecommendationRequestIndexPage tests", () => {
 
     const axiosMock = new AxiosMockAdapter(axios);
 
-
     const testId = "RecommendationRequestTable";
-  
     const setupUserOnly = () => {
         axiosMock.reset();
         axiosMock.resetHistory();
@@ -154,4 +151,3 @@ describe("RecommendationRequestIndexPage tests", () => {
     });
 
 });
-
