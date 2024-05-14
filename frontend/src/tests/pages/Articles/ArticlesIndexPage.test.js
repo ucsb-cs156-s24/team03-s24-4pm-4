@@ -25,9 +25,7 @@ describe("ArticlesIndexPage tests", () => {
 
     const axiosMock = new AxiosMockAdapter(axios);
 
-
     const testId = "ArticlesTable";
-
 
     const setupUserOnly = () => {
         axiosMock.reset();
