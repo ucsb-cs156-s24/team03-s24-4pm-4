@@ -5,7 +5,6 @@ import { MemoryRouter } from "react-router-dom";
 import mockConsole from "jest-mock-console";
 import { articlesFixtures } from "fixtures/articlesFixtures";
 
-
 import { apiCurrentUserFixtures } from "fixtures/currentUserFixtures";
 import { systemInfoFixtures } from "fixtures/systemInfoFixtures";
 import axios from "axios";
@@ -138,7 +137,6 @@ describe("ArticlesIndexPage tests", () => {
                 </MemoryRouter>
             </QueryClientProvider>
         );
-
 
         await waitFor(() => { expect(screen.getByTestId(`${testId}-cell-row-0-col-id`)).toBeInTheDocument(); });
 
