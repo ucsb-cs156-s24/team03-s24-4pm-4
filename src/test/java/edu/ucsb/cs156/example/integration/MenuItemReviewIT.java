@@ -61,13 +61,15 @@ public class MenuItemReviewIT {
         public void test_that_logged_in_user_can_get_by_id_when_the_id_exists() throws Exception {
                 // arrange
 
+                LocalDateTime dateTime = LocalDateTime.parse("2024-01-01T00:00:00");
+
                 MenuItemReview review = MenuItemReview.builder()
-                .itemId(1L)
-                .reviewerEmail("test@example.com")
-                .stars(5)
-                .dateReviewed(LocalDateTime.now())
-                .comments("GREAT!")
-                .build();
+                        .itemId(1L)
+                        .reviewerEmail("test@gmail.com")
+                        .stars(5)
+                        .dateReviewed(dateTime)
+                        .comments("GREAT!")
+                        .build();
 
                 menuItemReviewRepository.save(review);
 
@@ -86,34 +88,26 @@ public class MenuItemReviewIT {
         public void an_admin_user_can_post_a_new_menuitemreview() throws Exception {
                 // arrange
 
-                LocalDateTime now = LocalDateTime.now();
+                LocalDateTime dateTime = LocalDateTime.parse("2024-01-01T00:00:00");
+
                 MenuItemReview review = MenuItemReview.builder()
+                        .id(1L)
                         .itemId(1L)
-                        .reviewerEmail("test@example.com")
+                        .reviewerEmail("test@gmail.com")
                         .stars(4)
-                        .dateReviewed(now)
+                        .dateReviewed(dateTime)
                         .comments("TASTY!")
                         .build();
 
                 // act
                 MvcResult response = mockMvc.perform(
-                        post("/api/menuitemreview/post")
-                                .param("itemId", "1")
-                                .param("reviewerEmail", "test@example.com")
-                                .param("stars", "4")
-                                .param("dateReviewed", now.toString())
-                                .param("comments", "TASTY!")
+                        post("/api/menuitemreview/post?itemId=1&reviewerEmail=test@gmail.com&stars=4&dateReviewed=2024-01-01T00:00:00&comments=TASTY!")
                                 .with(csrf()))
                         .andExpect(status().isOk()).andReturn();
 
                 // assert
+                String expectedJson = mapper.writeValueAsString(review);
                 String responseString = response.getResponse().getContentAsString();
-                MenuItemReview responseReview = mapper.readValue(responseString, MenuItemReview.class);
-                
-                assertEquals(review.getItemId(), responseReview.getItemId());
-                assertEquals(review.getReviewerEmail(), responseReview.getReviewerEmail());
-                assertEquals(review.getStars(), responseReview.getStars());
-                assertEquals(review.getDateReviewed(), responseReview.getDateReviewed());
-                assertEquals(review.getComments(), responseReview.getComments());
+                assertEquals(expectedJson, responseString);
         }
 }
