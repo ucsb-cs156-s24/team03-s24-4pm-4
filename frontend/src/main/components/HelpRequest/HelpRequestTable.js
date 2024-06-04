@@ -11,8 +11,6 @@ export default function HelpRequestTable({ requests, currentUser }) {
 
     const navigate = useNavigate();
 
-    // Edit, delete not implemented yet!!
-    
     const editCallback = (cell) => {
         navigate(`/helprequest/edit/${cell.row.values.id}`)
     }
